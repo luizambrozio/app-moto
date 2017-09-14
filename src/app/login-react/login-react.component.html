@@ -16,7 +16,7 @@
             <div  class="help-block">Password is required</div>
         </div>
         <div class="form-group">
-            <button (click)="loginR()" [disabled]="!userForm.valid" class="btn btn-primary">Login</button>
+            <button (click)="loginR()" [disabled]="!userForm.valid || loading" class="btn btn-primary">Login</button>
         </div>
         <div class="alert alert-danger">error</div>
     </form>

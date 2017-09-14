@@ -19,7 +19,6 @@ export class AuthenticationService {
        let options = new RequestOptions({ headers: headers }); // Create a request option
        let body = ({ email: email, password: password })
 
-      console.log('loginService '+body)
         return this.http.post(`${MOTO_API}/api/authenticate`,body, options).map((response: Response) => {
                 // login successful if there's a jwt token in the response
                 let token = response.json() && response.json().token;
@@ -35,6 +34,7 @@ export class AuthenticationService {
                 } else {
                     // return false to indicate failed login
                     return false;
+
                 }
             });
     }

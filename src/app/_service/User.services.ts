@@ -22,4 +22,9 @@ export class UserService {
         return this.http.get('/api/users', options)
             .map((response: Response) => response.json());
     }
+
+    getCurrentUser(){
+        var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        return currentUser.email;
+    }
 }

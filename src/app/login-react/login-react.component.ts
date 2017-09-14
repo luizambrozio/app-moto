@@ -14,6 +14,7 @@ export class LoginReactComponent implements OnInit {
 
   userForm: FormGroup
   error = '';
+  loading = false;
 
   constructor(private router: Router,
               private authenticationService: AuthenticationService,
@@ -29,13 +30,14 @@ export class LoginReactComponent implements OnInit {
   }
 
   loginR(){
-    console.log('foi: '+ this.userForm.value.email)
+    this.loading = true;
     this.authenticationService.login(this.userForm.value.email, this.userForm.value.password)
         .subscribe(result => {
             if (result === true) {
                 this.router.navigate(['/']);
             } else {
                 this.error = 'Username or password is incorrect';
+                this.loading = false;
 
             }
         });
