@@ -18,7 +18,7 @@
         <div class="form-group">
             <button (click)="loginR()" [disabled]="!userForm.valid || loading" class="btn btn-primary">Login</button>
         </div>
-        <div class="alert alert-danger">error</div>
+        <div *ngIf="error" class="alert alert-danger">{{error}}</div>
     </form>
     <p>Form value: {{ userForm.value | json }}</p>
     <p>Form status: {{ userForm.status | json }}</p>
