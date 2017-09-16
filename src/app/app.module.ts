@@ -11,13 +11,15 @@ import {ROTAS} from './app.ROTAS'
 
 import { AuthGuard } from './_guard/AuthGuard.index'
 import { AuthenticationService , UserService } from './_service/services.index';
-import { LoginReactComponent } from './login-react/login-react.component'
+import { LoginReactComponent } from './login-react/login-react.component';
+import { SignupComponent } from './signup/signup.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginReactComponent
+    LoginReactComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
