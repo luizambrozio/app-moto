@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';  // <-- #1 import module
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 
 import {ROTAS} from './app.ROTAS'
@@ -17,7 +16,6 @@ import { LoginReactComponent } from './login-react/login-react.component'
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     HomeComponent,
     LoginReactComponent
   ],
